@@ -1,4 +1,4 @@
-/* Variables de colores y estilos futuristas */
+
 :root {
     --bg-dark: #050509;
     --card-bg: rgba(20, 20, 35, 0.6);
@@ -26,7 +26,6 @@ body {
     position: relative;
 }
 
-/* Fondo con efecto de "estrellas" sutil */
 .bg-stars {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
@@ -39,7 +38,6 @@ body {
     z-index: -1;
 }
 
-/* Encabezado */
 header {
     background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, transparent 100%);
     padding: 60px 20px;
@@ -67,14 +65,12 @@ header {
     font-size: 0.9rem;
 }
 
-/* Contenedor principal */
 .container {
     max-width: 900px;
     margin: 0 auto;
     padding: 0 20px 60px 20px;
 }
 
-/* Efecto Glassmorphism para tarjetas */
 .glass {
     background: var(--card-bg);
     backdrop-filter: blur(10px);
@@ -126,7 +122,6 @@ header {
     color: var(--text-muted);
 }
 
-/* Formulario */
 .form-group {
     display: flex;
     flex-direction: column;
@@ -176,7 +171,6 @@ button:hover {
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
 }
 
-/* Resultados Estilizados */
 .status-waiting {
     color: var(--text-muted);
     font-style: italic;
@@ -212,7 +206,6 @@ button:hover {
     text-transform: uppercase;
 }
 
-/* Estilo para los tokens PRIMOS activados */
 .token.activated {
     border-color: var(--neon-green);
     box-shadow: 0 0 10px rgba(57, 255, 20, 0.2);
@@ -228,7 +221,6 @@ button:hover {
     font-weight: bold;
 }
 
-/* Footer */
 footer {
     position: fixed;
     bottom: 0; left: 0; width: 100%;
@@ -263,7 +255,6 @@ footer a:hover {
     text-shadow: 0 0 8px var(--neon-cyan);
 }
 
-/* --- DISEÑO RESPONSIVO --- */
 @media (min-width: 600px) {
     .header-content {
         max-width: 700px;
