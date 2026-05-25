@@ -1,0 +1,292 @@
+/* Variables de colores y estilos futuristas */
+:root {
+    --bg-dark: #050509;
+    --card-bg: rgba(20, 20, 35, 0.6);
+    --text-main: #e0e6ed;
+    --text-muted: #a0aec0;
+    --neon-cyan: #00ffff;
+    --neon-green: #39ff14;
+    --neon-border: rgba(0, 255, 255, 0.3);
+    --font-cyber: 'Orbitron', sans-serif;
+    --font-main: 'Roboto', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Fondo con efecto de "estrellas" sutil */
+.bg-stars {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: 
+        radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 3px),
+        radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 2px);
+    background-size: 550px 550px, 350px 350px;
+    background-position: 0 0, 40px 60px;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+/* Encabezado */
+header {
+    background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, transparent 100%);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.neon-text {
+    font-family: var(--font-cyber);
+    color: var(--neon-cyan);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px var(--neon-cyan), 0 0 20px var(--neon-cyan);
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-top: 10px;
+}
+
+.student-name {
+    margin-top: 5px;
+    color: var(--neon-border);
+    font-size: 0.9rem;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px 60px 20px;
+}
+
+/* Efecto Glassmorphism para tarjetas */
+.glass {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--neon-border);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 32px 0 rgba(0, 255, 255, 0.15);
+}
+
+.card {
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+.card h2 {
+    font-family: var(--font-cyber);
+    color: var(--neon-cyan);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon {
+    font-size: 1.5rem;
+    color: var(--text-main);
+}
+
+.algo-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.algo-item h3 {
+    color: var(--text-main);
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.algo-item p {
+    color: var(--text-muted);
+}
+
+/* Formulario */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: var(--text-main);
+    margin-bottom: 8px;
+}
+
+input[type="number"] {
+    padding: 12px;
+    background: rgba(0,0,0,0.3);
+    border: 1px solid var(--neon-border);
+    border-radius: 6px;
+    color: var(--neon-cyan);
+    font-family: var(--font-cyber);
+    font-size: 1.1rem;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: var(--neon-cyan);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+button {
+    font-family: var(--font-cyber);
+    background: transparent;
+    color: var(--neon-cyan);
+    border: 2px solid var(--neon-cyan);
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    background: rgba(0, 255, 255, 0.1);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+/* Resultados Estilizados */
+.status-waiting {
+    color: var(--text-muted);
+    font-style: italic;
+    text-align: center;
+}
+
+.digital-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 12px;
+}
+
+.token {
+    padding: 15px;
+    background: rgba(0,0,0,0.4);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.token strong {
+    font-family: var(--font-cyber);
+    display: block;
+    font-size: 1.2rem;
+    color: var(--text-main);
+}
+
+.token .label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+/* Estilo para los tokens PRIMOS activados */
+.token.activated {
+    border-color: var(--neon-green);
+    box-shadow: 0 0 10px rgba(57, 255, 20, 0.2);
+}
+
+.token.activated strong {
+    color: var(--neon-green);
+    text-shadow: 0 0 8px var(--neon-green);
+}
+
+.token.activated .label {
+    color: var(--neon-green);
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0; left: 0; width: 100%;
+    z-index: 100;
+}
+
+.footer-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 15px 25px;
+    border-bottom: none;
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+footer .links {
+    display: flex;
+    gap: 15px;
+}
+
+footer a {
+    color: var(--neon-cyan);
+    text-decoration: none;
+    transition: text-shadow 0.3s;
+}
+
+footer a:hover {
+    text-shadow: 0 0 8px var(--neon-cyan);
+}
+
+/* --- DISEÑO RESPONSIVO --- */
+@media (min-width: 600px) {
+    .header-content {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    header h1 {
+        font-size: 3rem;
+    }
+
+    .algo-flex {
+        flex-direction: row;
+    }
+    
+    .algo-item {
+        flex: 1;
+    }
+
+    .card h2 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        width: auto;
+    }
+}
