@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matemáticas que resuelven problemas: Fibonacci y Números Primos en la vida real</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+
+    <div class="bg-stars"></div>
+
+    <header>
+        <div class="header-content">
+            <h1 class="neon-text">Matemáticas en la vida real</h1>
+            <p class="subtitle">Fibonacci y Números Primos</p>
+            <p class="student-name"><strong>Estudiante:</strong> Carlos Alberto Quiroga Quisberth / Promoción Avant</p>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <section class="card glass">
+            <h2><span class="icon">📡</span> ¿De qué trata el problema?</h2>
+            <p>
+                En el mundo real, los números primos sirven muchísimo para la seguridad informática, como para proteger contraseñas, bloquear hackeos o validar códigos de acceso porque son difíciles de adivinar. Por otro lado, la serie de Fibonacci nos muestra cómo crecen las cosas en la naturaleza de forma ordenada. Si juntamos las dos cosas, podemos crear un sistema que genere una lista de códigos de seguridad automáticos y filtre solamente los que sean primos para que la contraseña sea el doble de segura.
+            </p>
+        </section>
+
+        <section class="card glass">
+            <h2><span class="icon">⚙️</span> ¿Cómo funciona el código?</h2>
+            <p style="margin-bottom: 15px;">
+                La página hace dos tareas matemáticas al mismo tiempo de manera muy sencilla:
+            </p>
+            <div class="algo-flex">
+                <div class="algo-item">
+                    <h3>Serie de Fibonacci</h3>
+                    <p>Va sumando los dos números anteriores para sacar el siguiente de la lista, usando variables normales sin meterse con vectores o cosas raras.</p>
+                </div>
+                <div class="algo-item">
+                    <h3>Revisión de Primos</h3>
+                    <p>Agarra cada número que salió en la serie y comprueba con un ciclo rápido si tiene divisores. Si solo se divide entre 1 y sí mismo, significa que es primo y es un código seguro.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="card glass form-section">
+            <h2><span class="icon">🔐</span> Generador de Códigos Seguros</h2>
+            <form id="formularioNeural" onsubmit="event.preventDefault(); iniciarConexion();">
+                <div class="form-group">
+                    <label for="cantidadTerminos">¿Cuántos números quieres revisar?:</label>
+                    <input type="number" id="cantidadTerminos" min="1" max="40" required placeholder="Ej. 10">
+                </div>
+                <button type="submit" id="btnEjecutar">Calcular y Verificar</button>
+            </form>
+        </section>
+
+        <section class="card glass result-section">
+            <h2><span class="icon">📊</span> Resultado</h2>
+            <div id="resultado">
+                <div class="status-waiting">Pon un número arriba y dale al botón para ver la magia.</div>
+            </div>
+        </section>
+
+        <section class="card glass conclusion">
+            <h2><span class="icon">💡</span> Conclusión</h2>
+            <p>
+                Este proyecto nos demuestra que las matemáticas no son solo teoría aburrida de cuaderno. Nos ayudan a resolver problemas reales de forma automática. En vez de estar haciendo divisiones a mano en un papel para saber si un código es seguro o no, JavaScript lo hace por nosotros en un segundo y sin equivocarse.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content glass">
+            <p>Desafío Web 2026 | Código propio y entendido</p>
+            <div class="links">
+                <a href="https://github.com/quirogacarlos620-creator/desafio-fibonacci-primos1" target="_blank" class="neon-link">📂 Repositorio Git</a>
+                <a href="https://quirogacarlos620-creator.github.io/desafio-fibonacci-primos1/" target="_blank" class="neon-link">🌐 Página Publicada</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js.js"></script>
+</body>
+</html>
